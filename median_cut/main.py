@@ -1,7 +1,5 @@
 import numpy as np 
-import collections
 from PIL import Image
-import matplotlib.pyplot as plt
 
 def median_cut(img, d = 1):
     img = img.copy()
@@ -30,13 +28,16 @@ def median_cut(img, d = 1):
     pixel_indices = np.arange(img.shape[0])
     bins = cut(img, pixel_indices, d)
 
+    colors = []
     for b_idx in bins:
         b = img[b_idx, :]
-        img[b_idx, :] = np.mean(b, axis=0).astype(np.uint8)  # assign color centroids
+        c = np.mean(b, axis=0).astype(np.uint8)  # color centroid
+        img[b_idx, :] = c
+        colors.append(c)
     
     img = img.reshape(h, w, -1)
 
-    return img
+    return img, colors
 
 if __name__ == '__main__':
     infile = '../data/town.png'
@@ -44,5 +45,5 @@ if __name__ == '__main__':
 
     for i in range(1, 8):
         print("Quantizeing image into {} colors ...".format(2**i))
-        img_q = median_cut(img, i)  # quantized image
+        img_q, _ = median_cut(img, i)  # quantized image
         Image.fromarray(img_q).save('../results/median_cut/q_{}.png'.format(2**i))
