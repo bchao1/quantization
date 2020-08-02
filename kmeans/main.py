@@ -44,7 +44,7 @@ if __name__ == "__main__":
     for K in [100]:
         print(K)
         img_q = kmeans_plus_plus(img, K)
-        Image.fromarray(img_q).save('q_{}.png'.format(K))
+        Image.fromarray(img_q).save('../results/kmeans/q_{}.png'.format(K))
 
 
 
