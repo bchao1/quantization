@@ -36,3 +36,4 @@ This is a repository for exploring various color quantization methods. Algorithm
 |![img](./results/kmeans/q_50.png)|![img](./results/kmeans/q_100.png)|
 
 ## Octree - quantization
+[Octrees](https://en.wikipedia.org/wiki/Octree) are trees which each node has (at most) eight children. It is an effective data structure for partitioning 3-dimensional spaces. A great post on octree implementations (in JavaScript) for color quantization can be found [here](https://observablehq.com/@tmcw/octree-color-quantization).
