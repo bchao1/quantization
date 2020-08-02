@@ -2,14 +2,14 @@
 > Color quantization zoo.
 
 ## Otsu's method - binarization
-[Otsu's method](https://en.wikipedia.org/wiki/Otsu%27s_method) is an algorithm for color binarization.
+[Otsu's method](https://en.wikipedia.org/wiki/Otsu%27s_method) is an algorithm for color binarization. See `otsu/`.
 
 |Colored|Otsu's method|Median threshold|
 |--|--|--|
 |![img](./data/town.png)|![img](./results/otsu/otsu.png)|![img](./results/otsu/median.png)|
 
 ## Median cut algorithm - quantization
-[Median cut](https://en.wikipedia.org/wiki/Median_cut) is an algorithm for color quantization of images into 2<sup>n</sup> colors.
+[Median cut](https://en.wikipedia.org/wiki/Median_cut) is an algorithm for color quantization of images into 2<sup>n</sup> colors. See `median_cut/`.
 
 |Original|2 color|
 |--|--|

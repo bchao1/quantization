@@ -3,10 +3,10 @@ import collections
 from PIL import Image
 import matplotlib.pyplot as plt
 
-def median_cut(img, d=1):
+def median_cut(img, d = 1):
     img = img.copy()
     h, w, _ = img.shape
-    img = img.reshape(-1, img.shape[-1])  # flatten color channels
+    img = img.reshape(-1, img.shape[-1])  # flatten color channels (h * w, 3)
 
     def cut(img, bin_, d):
         if d == 0:

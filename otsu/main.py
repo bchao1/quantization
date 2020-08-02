@@ -3,8 +3,7 @@ import collections
 from PIL import Image
 import matplotlib.pyplot as plt
 
-def otsu(infile):
-    I = np.array(Image.open(infile).convert('L'))  # color intensity
+def otsu(I):
 
     pixels, counts = np.unique(I.ravel(), return_counts = True)  # count pixel value occurences
 
@@ -38,5 +37,6 @@ def otsu(infile):
 
     return B_otsu
 
-
-
+if __name__ == '__main__':
+    I = np.array(Image.open(infile).convert('L'))  # color intensity
+    img = otsu(I)
