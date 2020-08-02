@@ -40,10 +40,12 @@ def median_cut(img, d = 1):
     return img, colors
 
 if __name__ == '__main__':
-    infile = '../data/town.png'
+    infile = '../../data/town.jpg'
     img = np.array(Image.open(infile).convert('RGB'))
-
     for i in range(1, 8):
         print("Quantizeing image into {} colors ...".format(2**i))
         img_q, _ = median_cut(img, i)  # quantized image
         Image.fromarray(img_q).save('../results/median_cut/q_{}.png'.format(2**i))
+
+
+    
