@@ -10,7 +10,6 @@ def kmeans_plus_plus(img, K):
     c0_idx = np.random.randint(img.shape[0])
     centroids = [img[c0_idx]]  # initial centroid
     for i in range(K - 1):
-        print(i)
         D = np.max(np.stack([np.sum((img - c)**2, axis=1) for c in centroids]), axis=0)
         p = D / np.sum(D)
         c_idx = np.random.choice(img.shape[0], p = p)
@@ -27,7 +26,6 @@ def kmeans_plus_plus(img, K):
             colors = img[pixel_indices]
             c = np.mean(colors, axis=0)
             new_centroids.append(c)
-        print(error)
         error = np.mean([np.sqrt(np.sum((new_c - c)**2)) for new_c, c in zip(new_centroids, centroids)])
         centroids = new_centroids
     # Assign colors

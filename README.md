@@ -1,6 +1,7 @@
 # color-quantization
 > Color quantization zoo.
 
+This is a repository for exploring various color quantization methods. Algorithm implementations are in `src/`, with great help from `numpy`.
 ## Otsu's method - binarization
 [Otsu's method](https://en.wikipedia.org/wiki/Otsu%27s_method) is an algorithm for color binarization. See `src/otsu/`.
 
