@@ -13,6 +13,6 @@ def make_palette(infile, d = 1):
     return palette
 
 if __name__ == '__main__':
-    infile = '../data/logos/google.jpg'
-    palette = make_palette(infile)
-    Image.fromarray(palette).save('kfc.png')
+    infile = '../data/town.png'
+    palette = make_palette(infile, d=2)
+    Image.fromarray(palette).save('palette.png')
