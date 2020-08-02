@@ -21,3 +21,4 @@
 |64 color|128 color|
 |![img](./results/median_cut/q_64.png)|![img](./results/median_cut/q_128.png)|
 
+## Octree quantization
