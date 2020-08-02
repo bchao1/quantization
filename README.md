@@ -22,16 +22,16 @@
 |![img](./results/median_cut/q_64.png)|![img](./results/median_cut/q_128.png)|
 
 ## K-means++ - quantization
-[K-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) is an improved K-means algorithm with better initialization. Initializing with sparser centroids (though more computationally expensive) can lead to faster convergence. See `kmeans/`.
+[K-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) is an improved K-means algorithm with better initialization. Initializing with sparser centroids (though more computationally expensive) can lead to faster convergence. See `kmeans/`. Note that this algorithm can quantize an image to arbitrary number of colors.
 
 |Original|2 color|
 |--|--|
 |![img](./data/town.png)|![img](./results/kmeans/q_2.png)|
-|5 color|10 color|
-|![img](./results/kmeans/q_5.png)|![img](./results/kmeans/q_10.png)|
-|20 color|50 color|
-|![img](./results/kmeans/q_20.png)|![img](./results/kmeans/q_50.png)|
-|100 color||
-|![img](./results/kmeans/q_100.png)||
+|3 color|5 color|
+|![img](./results/kmeans/q_3.png)|![img](./results/kmeans/q_5.png)|
+|10 color|20 color|
+|![img](./results/kmeans/q_10.png)|![img](./results/kmeans/q_20.png)|
+|50 color|100 color|
+|![img](./results/kmeans/q_50.png)|![img](./results/kmeans/q_100.png)|
 
 ## Octree - quantization

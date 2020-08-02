@@ -41,7 +41,7 @@ if __name__ == "__main__":
     infile = '../data/town.png'
     img = np.array(Image.open(infile).convert('RGB')).astype(np.int)
 
-    for K in [100]:
+    for K in [3]:
         print(K)
         img_q = kmeans_plus_plus(img, K)
         Image.fromarray(img_q).save('../results/kmeans/q_{}.png'.format(K))
