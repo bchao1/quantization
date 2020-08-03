@@ -2,6 +2,14 @@
 > Color quantization zoo.
 
 This is a repository for exploring various color quantization methods. Algorithm implementations are in `src/`, with great help from `numpy`.
+
+## Table of Contents
+- Otsu's Method
+- Median Cut
+- Kmeans++
+- Octree
+- Floyd-Steinberg Dithering
+
 ## Otsu's method - binarization
 [Otsu's method](https://en.wikipedia.org/wiki/Otsu%27s_method) is an algorithm for color binarization. See `src/otsu/`.
 
@@ -37,3 +45,10 @@ This is a repository for exploring various color quantization methods. Algorithm
 
 ## Octree - quantization
 [Octrees](https://en.wikipedia.org/wiki/Octree) are trees which each node has (at most) eight children. It is an effective data structure for partitioning 3-dimensional spaces. A great post on octree implementations (in JavaScript) for color quantization can be found [here](https://observablehq.com/@tmcw/octree-color-quantization).
+
+## Floyd-Steinberg Dithering
+[Dither](https://en.wikipedia.org/wiki/Dither) is an intentionally applied form of noise used to randomize quantization error, preventing large-scale patterns such as color banding in images. See `src/dithering/`.
+
+|Original|64-colored|Dithered|
+|--|--|--|
+|![img](./data/town.png)|![img](results/median_cut/q_64.png)|![img](./results/dither.png)|
